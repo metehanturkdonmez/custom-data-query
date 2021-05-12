@@ -1,4 +1,5 @@
 === Custom Data Query ===
+
 Contributors: meteturkdonmez
 Tags: custom data query, certificate list, certificate query
 Requires at least: 5.5
@@ -11,6 +12,7 @@ You can create data lists in the admin panel with CDQ. Users can query these dat
 
 
 == Description ==
+
 Custom Data Query allows users to search within lists of data you create.
 You can enable your students to query and download certificate files with a number you associate.
 You can also do this for information and images in text form.
