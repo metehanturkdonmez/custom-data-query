@@ -1,12 +1,19 @@
 === Custom Data Query ===
 
 Contributors: meteturkdonmez
+
 Tags: custom data query, certificate list, certificate query
+
 Requires at least: 5.5
+
 Tested up to: 5.7.1
+
 Requires PHP: 7.0
+
 License: GPLv2
+
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
 
 You can create data lists in the admin panel with CDQ. Users can query these data with the search form.
 
