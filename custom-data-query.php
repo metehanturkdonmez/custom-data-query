@@ -126,7 +126,7 @@ class cdqPlug {
        $data_list_items_json = json_encode($data_list_items);
 
        if (!empty($data_list_title) and $cdq_data_list_insert_titles_error == 0) {
-        $cdq_data_list_insert = $wpdb->insert('wp_cdq_data_lists', array(
+        $cdq_data_list_insert = $wpdb->insert($wpdb->prefix.'cdq_data_lists', array(
            'name' => $data_list_title,
            'button_text' => $front_search_button_text,
            'placeholder_text' => $front_search_placeholder_text,
@@ -185,7 +185,7 @@ function edit_list(){
    $data_list_items_json = json_encode($data_list_items);
 
    if (!empty($data_list_title) and $cdq_data_list_insert_titles_error == 0) {
-    $cdq_data_list_insert = $wpdb->update('wp_cdq_data_lists', array(
+    $cdq_data_list_insert = $wpdb->update($wpdb->prefix.'cdq_data_lists', array(
        'name' => $data_list_title,
        'button_text' => $front_search_button_text,
        'placeholder_text' => $front_search_placeholder_text,
@@ -287,7 +287,7 @@ function add_data(){
      $cdq_insert_field_json = json_encode($_POST['cdq_insert_field']);
      $cdq_list_id = $_GET['cdq_list_id'];
 
-     $cdq_datas_insert = $wpdb->insert('wp_cdq_datas', array(
+     $cdq_datas_insert = $wpdb->insert($wpdb->prefix.'cdq_datas', array(
         'list_id' => $cdq_list_id,
         'datas' => $cdq_insert_field_json
     ));
@@ -307,7 +307,7 @@ if (isset($_POST['cdq_insert_field']) and !empty($_GET['cdq_list_id']) and !empt
  $cdq_insert_field_json = json_encode($_POST['cdq_insert_field']);
  $cdq_list_id = $_GET['cdq_list_id'];
 
- $cdq_datas_insert = $wpdb->update('wp_cdq_datas', array(
+ $cdq_datas_insert = $wpdb->update($wpdb->prefix.'cdq_datas', array(
     'list_id' => $cdq_list_id,
     'datas' => $cdq_insert_field_json
 ),array('id'=>$_POST['datas_id']));
